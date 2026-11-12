@@ -34,3 +34,10 @@ print((df["registration_type"].value_counts(normalize=True) * 100).round(1))
 
 print("\n=== Spelling problems to fix in Week 2 (unique country values) ===")
 print(sorted(df["country"].dropna().unique()))
+
+print("\n=== Most popular tracks in 2026 (share %) ===")
+df_2026 = df[df["edition"] == 2026]
+print((df_2026["track"].value_counts(normalize=True) * 100).round(1))
+
+print("\n=== Attendance rate by edition (%) ===")
+print((df.groupby("edition")["attended"].mean() * 100).round(1))
