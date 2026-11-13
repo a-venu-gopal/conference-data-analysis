@@ -11,3 +11,6 @@ venv/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Generated database (rebuilt by sql_analysis.py)
+*.db
